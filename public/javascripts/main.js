@@ -2,7 +2,7 @@ document.querySelector("form").addEventListener("submit", e => {
     e.preventDefault();
     let inputCityValue = document.getElementById("txtCity").value;
   
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=Stockholm&appid=be87d6d3c69e84700a081f270920912c&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputCityValue}&appid=be87d6d3c69e84700a081f270920912c&units=metric`)
      .then(response => response.json())
      .then(data => {
         const { main, name, sys, weather } = data;
